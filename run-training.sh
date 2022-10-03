@@ -3,7 +3,7 @@ python "main.py" \
  -t \
  --actual_resume "model.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/outputs/txt2img-samples/samples/person_ddim" \
- -n meimei \
+ -n stella \
  --gpus 0, \
  --data_root "/workspace/Dreambooth-Stable-Diffusion/training_samples" \
  --max_training_steps 1600 \
