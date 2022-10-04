@@ -1,7 +1,7 @@
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "model-epoch08-float16.ckpt" \
+ --actual_resume "ellie-10000-pruned-fp16.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/outputs/txt2img-samples/samples/person_ddim" \
  -n victoria_wd \
  --gpus 0, \
