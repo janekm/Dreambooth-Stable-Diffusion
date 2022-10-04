@@ -39,7 +39,7 @@ class PersonalizedBase(Dataset):
                  set="train",
                  placeholder_token="dog",
                  per_image_tokens=False,
-                 center_crop=False,
+                 center_crop=True,
                  mixing_prob=0.25,
                  coarse_class_text=None,
                  reg=False
