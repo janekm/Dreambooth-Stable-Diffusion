@@ -8,7 +8,7 @@ from torchvision import transforms
 import random
 
 training_templates_smallest = [
-    'angelababy {}',
+    'liuyifei {}',
 ]
 
 reg_templates_smallest = [
