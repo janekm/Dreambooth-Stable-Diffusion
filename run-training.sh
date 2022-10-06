@@ -1,12 +1,12 @@
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "model.ckpt" \
- --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/outputs/txt2img-samples/samples/person_ddim" \
- -n enki \
+ --actual_resume "enki.ckpt" \
+ --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/person_ddim" \
+ -n "dan" \
  --gpus 0, \
  --data_root "/workspace/Dreambooth-Stable-Diffusion/training_samples" \
- --max_training_steps 2000 \
+ --max_training_steps 2800 \
  --class_word "style" \
- -token "enki" \
+ --token "dan" \
  --no-test
