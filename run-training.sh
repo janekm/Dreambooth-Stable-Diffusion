@@ -4,7 +4,7 @@ mv -v Stable-Diffusion-Regularization-Images-person_ddim/person_ddim/* regulariz
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "enki.ckpt" \
+ --actual_resume "dan.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/person_ddim" \
  -n "alina" \
  --gpus 0, \
