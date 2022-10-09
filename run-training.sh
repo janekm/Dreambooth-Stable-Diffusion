@@ -1,12 +1,12 @@
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "alina.ckpt" \
+ --actual_resume "wlop.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/person_ddim" \
- -n "wlop" \
+ -n "nikki" \
  --gpus 0, \
  --data_root "/workspace/Dreambooth-Stable-Diffusion/training_samples" \
  --max_training_steps 3200 \
  --class_word "style" \
- --token "wlop" \
+ --token "nikki" \
  --no-test
