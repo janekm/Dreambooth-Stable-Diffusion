@@ -1,6 +1,7 @@
 killall python
 
 pip install lark piexif
+pip install gradio --upgrade
 apt -y update
 apt -y install wget curl unzip vim screen
 
@@ -30,6 +31,16 @@ cd Dreambooth-Stable-Diffusion
 cp ../stable-diffusion-webui/models/Stable-diffusion/wlop.ckpt .
 git clone https://github.com/djbielejeski/Stable-Diffusion-Regularization-Images-person_ddim.git
 mkdir -p regularization_images/person_ddim
-mv -v Stable-Diffusion-Regularization-Images-person_ddim/person_ddim/* regularization_images/person_ddim/   
+mv -v Stable-Diffusion-Regularization-Images-person_ddim/person_ddim/* regularization_images/person_ddim/ 
+
+pip install pytorch-lightning==1.6.5
+pip install test-tube
+pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
+pip install pillow==9.0.1
+pip install torchmetrics==0.6.0
+pip install -qq diffusers["training"]==0.3.0 transformers ftfy
+
+# python webui.py --port 3000 --listen --disable-safe-unpickle
 
 sleep infinity
