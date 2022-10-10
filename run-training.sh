@@ -3,10 +3,10 @@ python "main.py" \
  -t \
  --actual_resume "wlop.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/person_ddim" \
- -n "nikki" \
+ -n "angelina" \
  --gpus 0, \
  --data_root "/workspace/Dreambooth-Stable-Diffusion/training_samples" \
- --max_training_steps 3200 \
+ --max_training_steps 2520 \
  --class_word "style" \
- --token "nikki" \
+ --token "angelina" \
  --no-test

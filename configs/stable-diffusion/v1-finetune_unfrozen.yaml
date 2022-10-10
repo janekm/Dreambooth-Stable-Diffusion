@@ -85,7 +85,7 @@ data:
         size: 512
         set: train
         per_image_tokens: false
-        repeats: 100
+        repeats: 50
     reg:
       target: ldm.data.personalized.PersonalizedBase
       params:
