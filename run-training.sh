@@ -1,7 +1,7 @@
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "wlop.ckpt" \
+ --actual_resume "guweiz.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/person_ddim" \
  -n "testino" \
  --gpus 0, \
