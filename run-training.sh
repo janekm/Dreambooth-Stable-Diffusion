@@ -7,6 +7,6 @@ python "main.py" \
  --gpus 0, \
  --data_root "/workspace/Dreambooth-Stable-Diffusion/training_samples" \
  --max_training_steps 1818 \
- --class_word "style" \
+ --class_word "person" \
  --token "gunslinger" \
  --no-test
