@@ -6,7 +6,7 @@ python "main.py" \
  -n "testino" \
  --gpus 0, \
  --data_root "/workspace/Dreambooth-Stable-Diffusion/training_samples" \
- --max_training_steps 3300 \
+ --max_training_steps 1540 \
  --class_word "style" \
  --token "testino" \
  --no-test
