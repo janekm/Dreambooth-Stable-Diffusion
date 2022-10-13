@@ -41,6 +41,8 @@ pip install pillow==9.0.1
 pip install torchmetrics==0.6.0
 pip install -qq diffusers["training"]==0.3.0 transformers ftfy
 
+
+
 # python webui.py --port 3000 --listen --disable-safe-unpickle
 
 sleep infinity
