@@ -191,7 +191,7 @@ class CrossAttention(nn.Module):
         return self.to_out(out)
 
     def forward(self, x, context=None, mask=None):
-        if xformer_available:
+        if xformers_available:
             return self.xformers_attention_forward(x, context, mask)
 
         h = self.heads
