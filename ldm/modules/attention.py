@@ -180,7 +180,7 @@ class CrossAttention(nn.Module):
         context = default(context, x)
 
         k_in = self.to_k(context)
-        v_in = self.to_v(contex)
+        v_in = self.to_v(context)
 
         q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b n h d', h=h), (q_in, k_in, v_in))
         del q_in, k_in, v_in
