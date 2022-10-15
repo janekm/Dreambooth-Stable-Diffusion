@@ -193,10 +193,10 @@ class AttnBlock(nn.Module):
             return x + out
         except NotImplementedError:
             return cross_attention_attnblock_forward(self, x)
-            
+
     def forward(self, x):
-        if xformers_available:
-            return self.xformers_attnblock_forward(x)
+        # if xformers_available:
+        #     return self.xformers_attnblock_forward(x)
         h_ = x
         h_ = self.norm(h_)
         q = self.q(h_)
