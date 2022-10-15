@@ -7,6 +7,14 @@ from einops import rearrange, repeat
 
 from ldm.modules.diffusionmodules.util import checkpoint
 
+xformers_available = False
+
+try:
+    import xformers.ops
+    xformers_available = True
+    print("successfully loaded cuda implementations for xformers!")
+except Exception:
+    pass
 
 def exists(val):
     return val is not None
@@ -166,8 +174,26 @@ class CrossAttention(nn.Module):
             nn.Linear(inner_dim, query_dim),
             nn.Dropout(dropout)
         )
+    def xformers_attention_forward(self, x, context=None, mask=None):
+        h = self.heads
+        q_in = self.to_q(x)
+        context = default(context, x)
+
+        context_k, context_v = hypernetwork.apply_hypernetwork(shared.loaded_hypernetwork, context)
+        k_in = self.to_k(context_k)
+        v_in = self.to_v(context_v)
+
+        q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b n h d', h=h), (q_in, k_in, v_in))
+        del q_in, k_in, v_in
+        out = xformers.ops.memory_efficient_attention(q, k, v, attn_bias=None)
+
+        out = rearrange(out, 'b n h d -> b n (h d)', h=h)
+        return self.to_out(out)
 
     def forward(self, x, context=None, mask=None):
+        if xformer_available:
+            return self.xformers_attention_forward(x, context, mask)
+
         h = self.heads
 
         q = self.to_q(x)

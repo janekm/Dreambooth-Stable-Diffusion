@@ -8,6 +8,13 @@ from einops import rearrange
 from ldm.util import instantiate_from_config
 from ldm.modules.attention import LinearAttention
 
+xformers_available = False
+
+try:
+    import xformers.ops
+    xformers_available = True
+except Exception:
+    pass
 
 def get_timestep_embedding(timesteps, embedding_dim):
     """
@@ -174,8 +181,22 @@ class AttnBlock(nn.Module):
                                         stride=1,
                                         padding=0)
 
-
+    def xformers_attnblock_forward(self, x):
+        try:
+            h_ = x
+            h_ = self.norm(h_)
+            q1 = self.q(h_).contiguous()
+            k1 = self.k(h_).contiguous()
+            v = self.v(h_).contiguous()
+            out = xformers.ops.memory_efficient_attention(q1, k1, v)
+            out = self.proj_out(out)
+            return x + out
+        except NotImplementedError:
+            return cross_attention_attnblock_forward(self, x)
+            
     def forward(self, x):
+        if xformers_available:
+            return self.xformers_attnblock_forward(x)
         h_ = x
         h_ = self.norm(h_)
         q = self.q(h_)
