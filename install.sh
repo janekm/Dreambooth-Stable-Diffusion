@@ -1,9 +1,12 @@
+#!/bin/bash
+echo "Container Started"
+source /venv/bin/activate
 killall python
 
 pip install lark piexif
 pip install gradio --upgrade
 apt -y update
-apt -y install wget curl unzip vim screen
+apt -y install wget curl unzip vim screen tmux
 
 cd /workspace
 
@@ -14,7 +17,7 @@ unzip awscliv2.zip
 cd /workspace
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git webui
 
-aws s3 cp s3://sd-models-1/wlop.ckpt models/Stable-diffusion/
+aws s3 cp s3://arn:aws:s3::296549613961:accesspoint/mf3qjau7cw8ey.mrap/testino1.ckpt /workspace/webui/models/Stable-diffusion
 
 curl "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz" -o "ngrok-v3-stable-linux-amd64.tgz"
 tar xfvz ngrok-v3-stable-linux-amd64.tgz
