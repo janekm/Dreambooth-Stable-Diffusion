@@ -43,6 +43,7 @@ pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
 pip install pillow==9.0.1
 pip install torchmetrics==0.6.0
 pip install -qq diffusers["training"]==0.3.0 transformers ftfy
+pip install captionizer
 
 
 
