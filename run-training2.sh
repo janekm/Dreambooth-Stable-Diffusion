@@ -1,11 +1,11 @@
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "parallel6.ckpt" \
- --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/regularization_images/person_ddim" \
- -n "parallel6" \
+ --actual_resume "rw-v1-5-full.ckpt" \
+ --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/woman_unsplash_3500" \
+ -n "par_15_a" \
  --gpus 0, \
- --data_root "/workspace/Dreambooth-Stable-Diffusion/train" \
- --max_training_steps 15655 \
+ --data_root "/workspace/Dreambooth-Stable-Diffusion/train3" \
+ --max_training_steps 30000 \
  --no-test \
  --token "notoken"
