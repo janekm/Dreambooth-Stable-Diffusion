@@ -1,40 +1,4 @@
-Norman Rockwell
-Peter Mohrbacher
-Peter Paul Rubens
-Alberto Vargas
-Naughty dog
-kentaro miura
-Maciej Kuciara
-Sung Choi
-Jiro Taniguchi
-Katsuhiro Otomo
-Philippe Druillet
-Alejandro Jodorowsky Prullansky
-Jean Moebius Giraud
-Jean Giraud
-Enki Bilal
-Milo Manara
-genndy tartakovsky
-William Nunez
-Hajime Sorayama
-raymond swanland
-thomas kinkade
-alphonse mucha
-Toshiko Okanoue
-Dino Valls
-Hieronymus Bosch
-Peter Mohrbacher
-Steve Argyle
-Terese Nielsen
-Laurie Lipton
-Arthur Rackham
-Ross Tran
-Ruan Jia
-Daniel Dociu
-Stanley Artgerm Lau
-WLOP
-Rossdraws
-James Jean
+Norman Rockwell,Peter Mohrbacher,Peter Paul Rubens,Alberto Vargas,Naughty dog,kentaro miura,Maciej Kuciara,Sung Choi,Jiro Taniguchi,Katsuhiro Otomo,Philippe Druillet,Alejandro Jodorowsky Prullansky,Jean Moebius Giraud,Jean Giraud,Enki Bilal,Milo Manara,genndy tartakovsky,William Nunez,Hajime Sorayama,raymond swanland,thomas kinkade,alphonse mucha,Toshiko Okanoue,Dino Valls,Hieronymus Bosch,Peter Mohrbacher,Steve Argyle,Terese Nielsen,Laurie Lipton,Arthur Rackham,Ross Tran,Ruan Jia,Daniel Dociu,Stanley Artgerm Lau,WLOP,Rossdraws,James Jean
 Andrei Riabovitchev
 Marc Simonetti
 Mario Testino
@@ -155,54 +119,15 @@ Ignacio Fernández Ríos
 kidmo
 caidychen
 
-Mina Petrovic
-Laica chrose
-Jessica prando
-Tsutomu Nihei
-Osamu Tezuka
-Masashi Kishimoto
-Utagawa hiroshige
-Moebius
-Yoshitaka amano
-Riza Abbasi
-Nausicaa Ghibli
-Yoneyama Mai
-Sakimichan
-makoto shinkai
-kyoto animation
+Mina Petrovic,Laica chrose,Jessica prando,Tsutomu Nihei,Osamu Tezuka,Masashi Kishimoto,Utagawa hiroshige,Moebius,Yoshitaka amano,Riza Abbasi,Nausicaa Ghibli,Yoneyama Mai,Sakimichan,makoto shinkai,kyoto animation
 
 jeremy lipkin
 michael garmash
 rob rey
 
-J. M. W. Turner
-John Constable
-Thomas Gainsborough
-Paul Nash
-Michael Alford
-David Brown
-Frederick Clive Newcome
-Joseph Longhurst
-Oskar Kokoschka
-Harold Knight
-Jeremy Gardiner
-Henry Bright
-William Bennett
-Thomas William Bowler
-Peter Brook
-Henry Matthew Brock
-Edward Wilkins Waite
-Francis Bourgeois
-Joshua Reynolds
+J. M. W. Turner,John Constable,Thomas Gainsborough,Paul Nash,Michael Alford,David Brown,Frederick Clive Newcome,Joseph Longhurst,Oskar Kokoschka,Harold Knight,Jeremy Gardiner,Henry Bright,William Bennett,Thomas William Bowler,Peter Brook,Henry Matthew Brock,Edward Wilkins Waite,Francis Bourgeois,Joshua Reynolds
 
-Jan van Goyen
-Hendrick Avercamp
-Bartholomeus van der Helst
-Abraham Bloemaert
-Paulus Bor
-Alfred Stevens
-Johannes Vermeer
-Jan den Uyl
+Jan van Goyen,Hendrick Avercamp,Bartholomeus van der Helst,Abraham Bloemaert,Paulus Bor,Alfred Stevens,Johannes Vermeer,Jan den Uyl
 
 
 School of Fontainebleau

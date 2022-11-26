@@ -1,11 +1,11 @@
 python "main.py" \
  --base configs/stable-diffusion/v1-finetune_unfrozen.yaml \
  -t \
- --actual_resume "par_15_a.ckpt" \
+ --actual_resume "CandyMissionBerryF222-hassan.ckpt" \
  --reg_data_root "/workspace/Dreambooth-Stable-Diffusion/woman_unsplash_3500" \
- -n "lalisa" \
+ -n "train9" \
  --gpus 0, \
- --data_root "/workspace/Dreambooth-Stable-Diffusion/train6" \
- --max_training_steps 7373 \
+ --data_root "/workspace/Dreambooth-Stable-Diffusion/train9" \
+ --max_training_steps 60000 \
  --no-test \
  --token "notoken"
