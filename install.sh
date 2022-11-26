@@ -17,8 +17,6 @@ unzip awscliv2.zip
 cd /workspace
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git webui
 
-aws s3 cp s3://arn:aws:s3::296549613961:accesspoint/mf3qjau7cw8ey.mrap/train6c.ckpt /workspace/webui/models/Stable-diffusion
-
 curl "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz" -o "ngrok-v3-stable-linux-amd64.tgz"
 tar xfvz ngrok-v3-stable-linux-amd64.tgz
 ./ngrok config add-authtoken ${NGROK_TOKEN}
@@ -40,9 +38,10 @@ pip install pillow==9.0.1
 pip install torchmetrics==0.6.0
 pip install -qq diffusers["training"]==0.3.0 transformers ftfy
 pip install captionizer
+pip install torchsde
 
-
-
+aws s3 cp s3://arn:aws:s3::296549613961:accesspoint/mf3qjau7cw8ey.mrap/9_any30_nitro20.ckpt /workspace/webui/models/Stable-diffusion/
+aws s3 cp s3://arn:aws:s3::296549613961:accesspoint/mf3qjau7cw8ey.mrap/vae-ft-mse-840000-ema-pruned.vae.pt /workspace/webui/models/Stable-diffusion/
 # python webui.py --port 3000 --listen --disable-safe-unpickle
 
 sleep infinity
