@@ -25,7 +25,12 @@ tar xfvz ngrok-v3-stable-linux-amd64.tgz
 cd /workspace/webui
 mv ../stable-diffusion-webui/repositories .
 mv ../stable-diffusion-webui/model.ckpt models/Stable-diffusion/
+cd /workspace
+git clone https://github.com/Stability-AI/stablediffusion.git /workspace/webui/repositories/stable-diffusion-stability-ai
 
+cd /workspace/webui/models/Stable-diffusion/
+wget https://huggingface.co/stabilityai/stable-diffusion-2/resolve/main/768-v-ema.ckpt
+cp /workspace/webui/repositories/stable-diffusion-stability-ai/configs/stable-diffusion/v2-inference-v.yaml /workspace/webui/models/Stable-diffusion/768-v-ema.yaml
 cd /workspace
 git clone https://github.com/janekm/Dreambooth-Stable-Diffusion.git
 cd Dreambooth-Stable-Diffusion
@@ -39,9 +44,14 @@ pip install torchmetrics==0.6.0
 pip install -qq diffusers["training"]==0.3.0 transformers ftfy
 pip install captionizer
 pip install torchsde
+pip install gradio==3.9
+pip install safetensors
+pip install open_clip_torch
 
 aws s3 cp s3://arn:aws:s3::296549613961:accesspoint/mf3qjau7cw8ey.mrap/9_any30_nitro20.ckpt /workspace/webui/models/Stable-diffusion/
 aws s3 cp s3://arn:aws:s3::296549613961:accesspoint/mf3qjau7cw8ey.mrap/vae-ft-mse-840000-ema-pruned.vae.pt /workspace/webui/models/Stable-diffusion/
 # python webui.py --port 3000 --listen --disable-safe-unpickle
+cd /workspace/webui/repositories/k-diffusion/
+git pull
 
 sleep infinity
