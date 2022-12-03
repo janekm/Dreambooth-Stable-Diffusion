@@ -1,0 +1,27 @@
+accelerate launch --num_cpu_threads_per_process 20 train_db_fixed.py \
+    --v2 \
+    --v_parameterization \
+    --pretrained_model_name_or_path="/workspace/stable-diffusion-2" \
+    --train_data_dir="/workspace/koh_data/train/" \
+    --prior_loss_weight=1.0 \
+    --output_dir="/workspace/koh_data/train_out/" \
+    --resolution="768,768" \
+    --train_batch_size=4 \
+    --learning_rate="2e-6" \
+    --max_train_steps=20000 \
+    --xformers \
+    --mixed_precision="bf16" \
+    --save_every_n_epochs=1 \
+    --logging_dir="/workspace/koh_data/train_log/" \
+    --seed=494481440 \
+    --lr_scheduler="polynomial" \
+    --wandb_project_name="alina" \
+    --log_images_every_n_epochs=1 \
+    --log_image_base_checkpoint="/workspace/stable-diffusion-2" \
+    --enable_bucket \
+    --use_8bit_adam \
+    --save_precision="bf16" \
+    --stop_text_encoder_training=1000 \
+    --cache_latents
+
+    --reg_data_dir="/workspace/koh_data/reg/" \
