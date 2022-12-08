@@ -52,6 +52,6 @@ cd /workspace/webui/repositories/k-diffusion/
 git pull
 
 cd /workspace/
-git clone https://huggingface.co/stabilityai/stable-diffusion-2
+# git clone https://huggingface.co/stabilityai/stable-diffusion-2-1
 
 sleep infinity
