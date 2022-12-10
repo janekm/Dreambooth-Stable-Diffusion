@@ -29,6 +29,7 @@ cd /workspace
 git clone https://github.com/Stability-AI/stablediffusion.git /workspace/webui/repositories/stable-diffusion-stability-ai
 
 cd /workspace/webui/models/Stable-diffusion/
+wget https://raw.githubusercontent.com/lawfordp2017/diffusers/main/scripts/convert_diffusers_to_original_stable_diffusion.py
 cp /workspace/webui/repositories/stable-diffusion-stability-ai/configs/stable-diffusion/v2-inference-v.yaml /workspace/webui/models/Stable-diffusion/768-v-ema.yaml
 cd /workspace
 
@@ -46,6 +47,13 @@ pip install safetensors
 pip install open_clip_torch
 apt -y install git-lfs
 git lfs install
+
+pip install bitsandbytes
+pip install transformers==4.22.0
+pip install accelerate==0.15.0
+pip install git+https://github.com/huggingface/diffusers.git
+pip install k_diffusion==0.0.12
+pip install pillow==9.3.0
 
 # python webui.py --port 3000 --listen --disable-safe-unpickle
 cd /workspace/webui/repositories/k-diffusion/
