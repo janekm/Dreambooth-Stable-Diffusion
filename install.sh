@@ -60,6 +60,9 @@ cd /workspace/webui/repositories/k-diffusion/
 git pull
 
 cd /workspace/
+
+aws s3 cp s3://sd-training-data/dataset.tgz .
+aws s3 cp s3://sd-models-1/epoch120.tar .
 # git clone https://huggingface.co/stabilityai/stable-diffusion-2-1
 
 sleep infinity
