@@ -1,0 +1,7 @@
+python utils/convert_original_stable_diffusion_to_diffusers.py --scheduler_type ddim \
+--original_config_file e256te32e120_30.yaml \
+--image_size 768 \
+--checkpoint_path e256te32e120_30.ckpt \
+--prediction_type v_prediction \
+--upcast_attn False \
+--dump_path "e256te32e120_30"
